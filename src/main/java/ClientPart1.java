@@ -36,21 +36,57 @@ public class ClientPart1 {
 //    long test3Throughput = RunningThreads.runThreads(baseUrl,threadGroupSize,numThreadGroups,delaySeconds);
 
     /*Test for Go*/
+//    System.out.println("Go with threadGroupSize = 10, numThreadGroups = 10, delaySeconds = 2, result:");
+//    threadGroupSize = 10;
+//    numThreadGroups = 10;
+//    delaySeconds = 2;
+//    long test1GoThroughput = RunningThreads.runThreads(baseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
+//    System.out.println("Go with threadGroupSize = 10, numThreadGroups = 20, delaySeconds = 2, result:");
+//    threadGroupSize = 10;
+//    numThreadGroups = 20;
+//    delaySeconds = 2;
+//    long test2GoThroughput = RunningThreads.runThreads(baseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
+//    System.out.println("Go with threadGroupSize = 10, numThreadGroups = 30, delaySeconds = 2, result:");
+//    threadGroupSize = 10;
+//    numThreadGroups = 30;
+//    delaySeconds = 2;
+//    long test3GoThroughput = RunningThreads.runThreads(baseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
+
+    /* Test for Java Locally */
+//    System.out.println("Java with threadGroupSize = 10, numThreadGroups = 10, delaySeconds = 2, result:");
+//    threadGroupSize = 10;
+//    numThreadGroups = 10;
+//    delaySeconds = 2;
+//    RunningThreads.runThreads(localBaseUrl,threadGroupSize,numThreadGroups,delaySeconds);
+//
+//    System.out.println("Java with threadGroupSize = 10, numThreadGroups = 20, delaySeconds = 2, result:");
+//    threadGroupSize = 10;
+//    numThreadGroups = 20;
+//    delaySeconds = 2;
+//    RunningThreads.runThreads(localBaseUrl,threadGroupSize,numThreadGroups,delaySeconds);
+//
+//    System.out.println("Java with threadGroupSize = 10, numThreadGroups = 30, delaySeconds = 2, result:");
+//    threadGroupSize = 10;
+//    numThreadGroups = 30;
+//    delaySeconds = 2;
+//    RunningThreads.runThreads(localBaseUrl,threadGroupSize,numThreadGroups,delaySeconds);
+
+    /*Test for Go Locally*/
     System.out.println("Go with threadGroupSize = 10, numThreadGroups = 10, delaySeconds = 2, result:");
     threadGroupSize = 10;
     numThreadGroups = 10;
     delaySeconds = 2;
-    long test1GoThroughput = RunningThreads.runThreads(baseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
+    RunningThreads.runThreads(localBaseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
     System.out.println("Go with threadGroupSize = 10, numThreadGroups = 20, delaySeconds = 2, result:");
     threadGroupSize = 10;
     numThreadGroups = 20;
     delaySeconds = 2;
-    long test2GoThroughput = RunningThreads.runThreads(baseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
+    RunningThreads.runThreads(localBaseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
     System.out.println("Go with threadGroupSize = 10, numThreadGroups = 30, delaySeconds = 2, result:");
     threadGroupSize = 10;
     numThreadGroups = 30;
     delaySeconds = 2;
-    long test3GoThroughput = RunningThreads.runThreads(baseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
+    RunningThreads.runThreads(localBaseUrlGo,threadGroupSize,numThreadGroups,delaySeconds);
 
   }
 }

@@ -52,11 +52,6 @@ public class RunningThreads {
     System.out.println("Successful Requests: " + success);
     System.out.println("Failed Requests: " + failure);
 
-//    String configuration = "threadGroupSize=" + threadGroupSize +
-//        ",numThreadGroups=" + numThreadGroups +
-//        ",delaySeconds=" + delaySeconds;
-//    Write2FileHelper.appendToCSV("./throughputResults.csv", configuration, wallTime, throughput);
-
     return throughput;
   }
 
@@ -80,12 +75,20 @@ public class RunningThreads {
 
           try {
             ImageMetaData postResponse = apiInstance.newAlbum(image, profile);
-            String albumID = postResponse.getAlbumID();
+            localSuccess++;
+          } catch (ApiException e) {
+            localFailure++;
+            System.err.println("Exception when calling POST DefaultApi");
+            e.printStackTrace();
+          }
+          
+          try {
+            String albumID = "1"; // hardcoded albumID, GET returns pre-existing data, so albumID doesn't matter
             AlbumInfo getResponse = apiInstance.getAlbumByKey(albumID);
             localSuccess++;
           } catch (ApiException e) {
             localFailure++;
-            System.err.println("Exception when calling DefaultApi");
+            System.err.println("Exception when calling GET DefaultApi");
             e.printStackTrace();
           }
         }
