@@ -8,8 +8,13 @@ public class ClientPart1 {
     int numThreadGroups;
     int delaySeconds;
 
-    String baseUrl = "http://localhost:8080/AlbumServlet_war_exploded";
-    String baseUrlGo = "http://localhost:8080";
+    // Local server path
+    String localBaseUrl = "http://localhost:8080/AlbumServlet_war_exploded";
+    String localBaseUrlGo = "http://localhost:8080";
+
+    // AWS Instance URl
+    String baseUrl = "http://34.221.232.209:8080/AlbumServlet_war";
+    String baseUrlGo = "http://34.221.232.209:8080";
 
     /* Test for Java */
 //    System.out.println("Java with threadGroupSize = 10, numThreadGroups = 10, delaySeconds = 2, result:");
